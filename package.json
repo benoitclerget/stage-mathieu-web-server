@@ -1,9 +1,9 @@
 {
-  "name": "benoit-test-nodeapp",
+  "name": "stage-mathieu-web-server",
   "version": "1.0.0",
   "description": "Sample node static web application",
   "engines": {
-    "node": "14.16.0"
+    "node": "14.17.3"
   },
   "scripts": {
     "start": "node server/server.js",
@@ -11,12 +11,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/benoitclerget/benoit-test-nodeapp.git"
+    "url": "https://github.com/benoitclerget/stage-mathieu-web-server"
   },
   "keywords": [
-    "OpenShift",
-    "Garage",
-    "Montpellier"
+    "IBM Montpellier"
   ],
   "author": "Benoit Clerget",
   "license": "ISC",

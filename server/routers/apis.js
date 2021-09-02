@@ -8,6 +8,42 @@ const httpStatus = require('http-status')
 module.exports = function(app, appName, appVersion, gitRepo) {
   const router = express.Router()
 
+  // user infos
+  router.get('/api/user_infos', async function(req, res) {
+    let result = {
+      err: null,
+      userinfo: {
+        name: 'Martin Dupont',
+        email: 'mdupont@mail.com',
+      },
+    }
+    res
+    .status(httpStatus.OK)
+    .json(result)
+    .end()
+  })
+
+  // app news
+  router.get('/api/app_news', async function(req, res) {
+    let result = {
+      err: null,
+      news: [
+        {
+          title: 'This is the title of the latest news',
+          text: `Hello this is the latest news content`
+        },
+        {
+          title: 'This is the title of the second news',
+          text: `Hello this is the second news content`
+        },
+      ],
+    }
+    res
+    .status(httpStatus.OK)
+    .json(result)
+    .end()
+  })
+
   // system infos
   router.get('/api/system_infos', async function(req, res) {
     let result = {
