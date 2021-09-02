@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "appLogLevel": {
+    "searchPatterns": [
+      "env:appLogLevel",
+      "file:/server/config/dev-config.json:$.appLogLevel"
+    ]
+  },
+  "httpLogLevel": {
+    "searchPatterns": [
+      "env:httpLogLevel",
+      "file:/server/config/dev-config.json:$.httpLogLevel"
+    ]
+  }
+}
