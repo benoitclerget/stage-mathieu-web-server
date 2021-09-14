@@ -42,6 +42,15 @@ LICENSE file in the root directory of this source tree.
       .app--background-warmgray10 {
         background-color: #f7f3f2;
       }
+	  .app--background-green20 {
+        background-color: #a7f0ba;
+      }
+	  .app--background-red70 {
+        background-color: #a2191f;
+      }
+	  .app--text-purple80 {
+        color: #491d8b;
+      }
       /* carbon font and scale: https://www.carbondesignsystem.com/guidelines/typography/overview */
       .app--type-mono-scale_4 {
         font-size: 18px;
@@ -66,6 +75,12 @@ LICENSE file in the root directory of this source tree.
   align-items: center;
   padding-right: 5px    
 }
+		.bx--tile {
+        padding: 0;
+        height: 340px;
+        margin-bottom: 1rem;
+        width: 400px;
+      }
     </style>
     <script src="app_funcs.js"></script>
   </head>
@@ -126,6 +141,83 @@ LICENSE file in the root directory of this source tree.
           </div>
         </div>
       </div>
+	   <div class="bx--row">
+	   <div class="bx--row bx--row-padding">
+      <div class="bx--col bx--col-md-4 bx--col-sm-4">
+        <div class="bx--tile">
+		<div class="bx--tile__img">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-731/taco-1.png" />
+              </div>
+              <div class="bx--tile__content">
+                <h2>10 best breakfast tacos in <br />Austin, TX</h2>
+                <p>Here's where to find the real breakfast of champions.</p>
+                <button class="bx--btn bx--btn--secondary">
+                  View ratings
+                </button>
+              </div></div>
+      </div>
+      <div class="bx--col bx--col-md-4 bx--col-sm-4">
+        <div class="bx--tile app--background-blue20">
+		 <div class="bx--tile__img">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-731/taco-2.png" />
+              </div>
+              <div class="bx--tile__content app--text-purple80">
+                <h2>3 easy steps to making the perfect guacamole</h2>
+                <p>Healthy and filling. What could be better?</p>
+                <button class="bx--btn bx--btn--secondary">
+                  Get the recipe
+                </button>
+              </div>
+		</div>
+	  </div>
+      <div class="bx--col bx--col-md-8 bx--col-sm-4">
+        <div class="bx--tile app--background-green20">
+		<div class="bx--tile__img">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-731/taco-1.png" />
+              </div>
+              <div class="bx--tile__content">
+                <h2>5 vacation places to go this autumn</h2>
+                <p>Want to visit a place for autumn vacation? Here are the 5 best places to go for this period.</p>
+                <button class="bx--btn bx--btn--secondary app--background-red70">
+                  Check the list
+                </button>
+              </div>
+		</div>
+      </div>
+    </div>
+	</div>
+	
+	<div class="bx--row">
+	<div class="bx--row bx--row-padding">
+      <div class="bx--col bx--col-md-5 bx--col-sm-2">
+        <div class="bx--tile app--background-blue20">
+		<div class="bx--tile__img">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-731/taco-2.png" />
+              </div>
+              <div class="bx--tile__content">
+                <h2>10 Olympic Athletes</h2>
+                <p>Here are the 10 most memorable athletes who competed the Olympic Games.</p>
+                <button class="bx--btn bx--btn--secondary">
+                  Meet the team
+                </button>
+              </div></div>
+      </div>
+      <div class="bx--col bx--col-md-3 bx--col-sm-2">
+        <div class="bx--tile">
+		<div class="bx--tile__img">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-731/taco-1.png" />
+              </div>
+              <div class="bx--tile__content app--text-purple80">
+                <h2>8 recipes from foreign countries.</h2>
+                <p>You can find here 8 exotic recipes that originate from other countries.</p>
+                <button class="bx--btn bx--btn--secondary">
+                  View ratings
+                </button>
+              </div></div>
+      </div>
+	  </div>
+    </div>
+	
     </main>
   </body>
 </html>
