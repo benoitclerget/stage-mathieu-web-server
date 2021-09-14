@@ -60,6 +60,12 @@ LICENSE file in the root directory of this source tree.
       .app--productive-heading-04 {
         font-size: 28px;
       }
+	  .userinfo {
+  float: right;
+  display: flex;
+  align-items: center;
+  padding-right: 5px    
+}
     </style>
     <script src="app_funcs.js"></script>
   </head>
@@ -71,12 +77,32 @@ LICENSE file in the root directory of this source tree.
       <dds-top-nav menu-bar-label="IBM [Platform]" aria-label="IBM [Platform]">
         <dds-top-nav-item role="link" href="index.html" title="Home"></dds-top-nav-item>
         <dds-top-nav-item role="link" href="javascript:void(0);" title="About"></dds-top-nav-item>
+		
       </dds-top-nav>
+	  <div class="bx--grid userinfo">
+        <div class="bx--row">
+          <div class="bx--col-sm-0 bx--col-md-8 bx--col-lg-16">
+            <button class="bx--tag bx--tag--blue">
+              <span id="userinfo_div" class="bx--tag__label">
+              </span>
+            </button>
+          </div>
+          <div class="bx--col-sm-4 bx--col-md-0 bx--col-lg-0">
+            <button class="bx--tag bx--tag--red">
+              <span id="userinfo_sm_div" class="bx--tag__label">
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+	  
       <dds-left-nav-overlay></dds-left-nav-overlay>
       <dds-left-nav menu-bar-label="IBM [Platform]">
         <dds-left-nav-item role="link" href="index.html" title="Home"></dds-left-nav-item>
         <dds-left-nav-item role="link" href="javascript:void(0);" title="About"></dds-left-nav-item>
+		
       </dds-left-nav>
+	  
     </dds-masthead>
     <main>
       <div class="bx--grid">

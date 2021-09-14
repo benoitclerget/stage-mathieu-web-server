@@ -2,6 +2,7 @@
 // first page loading: show list of employess
 document.addEventListener("DOMContentLoaded", async function() {
   if (window.fetch) {
+	  otherapi()
     try{
       let response = await fetch('/api/app_news')
       if(response.ok) {
@@ -27,6 +28,28 @@ document.addEventListener("DOMContentLoaded", async function() {
   }
 
 })
+
+async function otherapi(){
+try{
+      let response = await fetch('/api/user_infos')
+      if(response.ok) {
+        response.json().then(function(myJson) {
+          if (!myJson.err) {
+            // set values into the dom
+			document.getElementById('userinfo_div').innerHTML = myJson.userinfo.name
+			document.getElementById('userinfo_sm_div').innerHTML = myJson.userinfo.name
+          } else {
+            console.error('API error: ' + myJson.message);
+          }
+        });
+      } else {
+        console.error('response error: ' + response.ok);
+      }
+  
+    } catch(error) {
+      console.error('Error with fetch operation: ' + error);
+    }
+}
 
 
 function formatMemNb(bytes) {
