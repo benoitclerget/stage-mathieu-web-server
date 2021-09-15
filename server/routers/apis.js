@@ -40,6 +40,56 @@ module.exports = function(app, appName, appVersion, gitRepo) {
           text: `Hello this is the second news content`
         },
       ],
+      cards: [
+        {
+          title: 'GDPS',
+          content: `IBM GDPS external web site`,
+          img: {
+            src: `https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-731/taco-1.png`,
+            descr: `Taco 1`
+          },
+          link: {
+            url: `https://www.ibm.com/it-infrastructure/z/technologies/gdps`,
+            text: `IBM GDPS`
+          }
+        },
+        {
+          title: 'IBM Montpellier Cloud Datacenter',
+          content: `Datacenter map with air cooling measurements (migration in progress)`,
+          img: {
+            src: `images/IBM_green_DC.jpg`,
+            descr: `IBM green datacenter`
+          },
+          link: {
+            url: `https://ccmplbot.eu-gb.mybluemix.net/infradc.html`,
+            text: `MPL datacenter`
+          }
+        },
+        {
+          title: '10 best breakfast tacos in Austin, TX',
+          content: `Here's where to find the real breakfast of champions.`,
+          img: {
+            src: `https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-731/taco-1.png`,
+            descr: `Taco 1`
+          },
+        },
+        {
+          title: '3 easy steps to making the perfect guacamole',
+          content: `Datacenter map with air cooling measurements (migration in progress)`,
+          img: {
+            src: `https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-731/taco-2.png`,
+            descr: `Taco 2`
+          },
+        },
+        {
+          title: '10 best breakfast tacos in Austin, TX',
+          content: `Here's where to find the real breakfast of champions.`,
+          img: {
+            src: `https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-731/taco-1.png`,
+            descr: `Taco 1`
+          },
+        },
+      ],
     }
     res
     .status(httpStatus.OK)
