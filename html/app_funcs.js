@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", async function() {
             // set values into the dom
 			document.getElementById("app_titre").innerHTML = myJson.titre;
             document.getElementById("app_texte_1").innerHTML = myJson.news[1].text;
-            document.getElementById("app_texte_2").innerHTML = myJson.text2;
+            /* document.getElementById("app_texte_2").innerHTML = myJson.text2; */
           } else {
             console.error('API error: ' + myJson.message);
           }
@@ -66,14 +66,18 @@ if(response.ok) {
 			var currentlink = "";
 			//loop
 			for (let i = 0; i < cardlist.length; i++) {
-				if (cardlist[i].link){currentlink = "<button class='bx--btn bx--btn--secondary'><a href=" + cardlist[i].link.url + " target='_blank'>" + cardlist[i].link.text + "</a></button>"}   
-				cardsHTML += "<div class='bx--col bx--col-md-4 bx--col-sm-4'><div class='bx--tile'><div class='bx--tile__img'><img src='" + cardlist[i].img.src + "' /></div><div class='bx--tile__content'><h2>" + cardlist[i].title + "</h2><p>" + cardlist[i].content + "</p>" + currentlink + "</div></div></div>";
-				/* cardlist[i].title + cardlist[i].content + cardlist[i].link + "<br>" */		
+				if (cardlist[i].link){currentlink = "<button class='bx--btn bx--btn--secondary bx--btn--field buttontolink' type='button' onclick=\"window.location='" + cardlist[i].link.url + "';\">" + cardlist[i].link.text + "</button>"}   
+				cardsHTML += "<div class='bx--col-lg-4 cardsize'><div class='bx--tile'><div class='bx--tile__img'><img class='pictile' src='"
+				+ cardlist[i].img.src + "' /></div><div class='bx--tile__content'><h2>"
+				+ cardlist[i].title + "</h2><p>"
+				+ cardlist[i].content + "</p>"
+				+ currentlink + "</div></div></div>";
+				/* cardlist[i].title + cardlist[i].content + cardlist[i].link + "<br>"   <a target='_white'>" + cardlist[i].link.text + "</a></button>*/		
 				currentlink = "";
 			}
 			
 			var h = document.getElementById("secondline");
-h.insertAdjacentHTML("afterend", cardsHTML); 
+h.innerHTML += cardsHTML; 
 			
 			console.log(cardsHTML);
           } else {
