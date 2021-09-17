@@ -29,7 +29,7 @@ module.exports = function(app, appName, appVersion, gitRepo) {
       err: null,
       titre: `Welcome to SCMPL slack bot application`,
       text1: `The scmpl slack application goal is to provide different information via slack slash commands. It is available in the <a href="https://ibm-cc-mpl.slack.com" target="_blank">IBM Systems Center | Montpellier</a> slack workspace<br /> 
-        To use it, type <b>/scmpl help</b> in any channel of the workspace
+        To use it, type '/scmpl help' in any channel of the workspace
         `,
       news: [
         {
