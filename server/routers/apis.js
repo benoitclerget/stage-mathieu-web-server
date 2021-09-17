@@ -87,7 +87,7 @@ module.exports = function(app, appName, appVersion, gitRepo) {
           },
           link: {
             url: `images/scmpl_slack_app_overview.png`,
-            text: `scmpl architecture diagram`
+            text: `View`
           }
         },
         {
