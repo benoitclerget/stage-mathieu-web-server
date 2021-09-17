@@ -75,7 +75,7 @@ module.exports = function(app, appName, appVersion, gitRepo) {
           },
           link: {
             url: `https://github.com/benoitclerget/stage-mathieu-web-server`,
-            text: `Stage Mathieu github repository`
+            text: `View`
           }
         },
         {
@@ -91,11 +91,11 @@ module.exports = function(app, appName, appVersion, gitRepo) {
           }
         },
         {
-          title: '3 easy steps to making the perfect guacamole',
-          content: `Datacenter map with air cooling measurements (migration in progress)`,
+          title: '10 best breakfast tacos in Austin, TX',
+          content: `Here's where to find the real breakfast of champions.`,
           img: {
-            src: `https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-731/taco-2.png`,
-            descr: `Taco 2`
+            src: `https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-731/taco-1.png`,
+            descr: `Taco 1`
           },
         },
       ],
