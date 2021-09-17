@@ -68,7 +68,8 @@ module.exports = function(app, appName, appVersion, gitRepo) {
         },
         {
           title: 'Code source repository',
-          content: `<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/benoitclerget/stage-mathieu-web-server?style=plastic">`,
+          content: `<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/benoitclerget/stage-mathieu-web-server?style=plastic"><br />
+            <img alt="GitHub repo size" src="https://img.shields.io/badge/langage-javascript%20html%20css-yellowgreen?style=plastic">`,
           img: {
             src: `images/github-logo.png`,
             descr: `Github`
