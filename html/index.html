@@ -89,6 +89,8 @@ LICENSE file in the root directory of this source tree.
 	  object-fit: cover;
 	  }
 	  
+	 
+	  
 	  .cardsize {
 	  min-width: 410px;
 	  }
@@ -99,6 +101,9 @@ LICENSE file in the root directory of this source tree.
 	  right: 10px;
 	  }
 	  
+	  #eastereggbtn {
+	  display: none;
+	  }
 	  
 	  #app_texte_1 {
 	  font-size: 28px;
@@ -121,6 +126,26 @@ LICENSE file in the root directory of this source tree.
 	  .devlist{
 	  font-size: 14px;
 	  }
+	  
+	  #eastereggdiv
+	{
+	position: absolute;
+	width: 100%;
+	padding: 20%;
+	}
+	  
+	  
+	  
+	  @media screen and (max-width: 500px) {
+   .tilesize {
+	 width: 70%;
+	 }
+	 #eastereggdiv
+	{
+	padding: 25%;
+	}
+}
+	  
 	  
     </style>
     <script src="app_funcs.js"></script>
@@ -187,6 +212,7 @@ LICENSE file in the root directory of this source tree.
       </div>
 	</section>
 
+
 	<div class="bx--grid">
 	  <div class="bx--row bx--row-padding" id="secondline">
 	<!--
@@ -219,8 +245,8 @@ LICENSE file in the root directory of this source tree.
 	  -->
 	  </div>
     </div>
-	<!-- <button class="bx--btn bx--btn--primary" type="button" data-modal-target="#modal-okqcchwac7l">Show
-  modal</button> -->
+	<!--  <div id="eastereggdiv" onclick="eastereggfound()"></div>  -->
+	<button class="bx--btn bx--btn--primary" id="eastereggbtn" type="button" data-modal-target="#modal-eastereggibm">You found it!</button>
   
   
   
@@ -284,6 +310,31 @@ LICENSE file in the root directory of this source tree.
   <!-- Note: focusable span allows for focus wrap feature within Modals -->
   <span tabindex="0"></span>
 </div>
+
+<div data-modal id="modal-eastereggibm" class="bx--modal " role="dialog"
+  aria-modal="true" aria-labelledby="modal-eastereggibm-label" aria-describedby="modal-eastereggibm-heading" tabindex="-1">
+  <div class="bx--modal-container bx--modal-container--sm">
+    <div class="bx--modal-header">
+      <p class="bx--modal-header__label bx--type-delta" id="modal-eastereggibm-label"></p>
+      <p class="bx--modal-header__heading bx--type-beta" id="modal-eastereggibm-heading"></p>
+      <button class="bx--modal-close" type="button" data-modal-close aria-label="close modal"  data-modal-primary-focus>
+        <svg focusable="false" preserveAspectRatio="xMidYMid meet" style="will-change: transform;" xmlns="http://www.w3.org/2000/svg" class="bx--modal-close__icon" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M12 4.7L11.3 4 8 7.3 4.7 4 4 4.7 7.3 8 4 11.3 4.7 12 8 8.7 11.3 12 12 11.3 8.7 8z"></path></svg>
+      </button>
+    </div>
+
+    <!-- Note: Modals with content that scrolls, at any viewport, requires `tabindex="0"` on the `bx--modal-content` element -->
+
+    <div class="bx--modal-content" >
+	<h1 id="app_titre">Why have you clicked here? There is nothing to see here, move along!</h1>
+    <img src="https://playplex.mtvnimages.com/uri/mgid:arc:content:southpark.intl:e86b255c-ed00-11e0-aca6-0026b9414f30?stage=staging&ep=shared.southpark.nordics" class="devpic">
+          </div>
+
+
+  </div>
+  <!-- Note: focusable span allows for focus wrap feature within Modals -->
+  <span tabindex="0"></span>
+</div>	
+	
 	
   </body>
 </html>
