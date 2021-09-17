@@ -28,8 +28,9 @@ module.exports = function(app, appName, appVersion, gitRepo) {
     let result = {
       err: null,
       titre: `Welcome to SCMPL slack bot application`,
-      text1: `One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me?" he thought. It wasn't a dream. His room, a proper human`,
-      text2: `Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to`,
+      text1: `The scmpl slack application goal is to provide different information via slack slash commands. It is available in the <a href="https://ibm-cc-mpl.slack.com" target="_blank">IBM Systems Center | Montpellier</a> slack workspace<br /> 
+        To use it, type <b>/scmpl help</b> in any channel of the workspace
+        `,
       news: [
         {
           title: 'This is the title of the latest news',
@@ -43,10 +44,10 @@ module.exports = function(app, appName, appVersion, gitRepo) {
       cards: [
         {
           title: 'GDPS',
-          content: `IBM GDPS external web site`,
+          content: `IBM GDPS® is a collection of system recovery offerings on the IBM Z® platform, each of which uses services, clustering technologies, and server and storage replication and automation`,
           img: {
-            src: `https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-731/taco-1.png`,
-            descr: `Taco 1`
+            src: `images/gdps-logo.png`,
+            descr: `IBM GDPS logo`
           },
           link: {
             url: `https://www.ibm.com/it-infrastructure/z/technologies/gdps`,
@@ -66,12 +67,28 @@ module.exports = function(app, appName, appVersion, gitRepo) {
           }
         },
         {
-          title: '10 best breakfast tacos in Austin, TX',
-          content: `Here's where to find the real breakfast of champions.`,
+          title: 'Code source repository',
+          content: `<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/benoitclerget/stage-mathieu-web-server?style=plastic">`,
           img: {
-            src: `https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-731/taco-1.png`,
-            descr: `Taco 1`
+            src: `images/github-logo.png`,
+            descr: `Github`
           },
+          link: {
+            url: `https://github.com/benoitclerget/stage-mathieu-web-server`,
+            text: `Stage Mathieu github repository`
+          }
+        },
+        {
+          title: 'scmpl architecture diagram',
+          content: `Click to see the diagram picture (implementation in progress)`,
+          img: {
+            src: `images/scmpl_slack_app_overview.png`,
+            descr: `scmpl architecture diagram`
+          },
+          link: {
+            url: `images/scmpl_slack_app_overview.png`,
+            text: `scmpl architecture diagram`
+          }
         },
         {
           title: '3 easy steps to making the perfect guacamole',
@@ -79,14 +96,6 @@ module.exports = function(app, appName, appVersion, gitRepo) {
           img: {
             src: `https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-731/taco-2.png`,
             descr: `Taco 2`
-          },
-        },
-        {
-          title: '10 best breakfast tacos in Austin, TX',
-          content: `Here's where to find the real breakfast of champions.`,
-          img: {
-            src: `https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-731/taco-1.png`,
-            descr: `Taco 1`
           },
         },
       ],
