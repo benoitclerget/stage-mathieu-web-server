@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", async function() {
           if (!myJson.err) {
             // set values into the dom
 			document.getElementById("app_titre").innerHTML = myJson.titre;
-            document.getElementById("app_texte_1").innerHTML = myJson.news[1].text;
+            document.getElementById("app_texte_1").innerHTML = myJson.text1;
             /* document.getElementById("app_texte_2").innerHTML = myJson.text2; */
           } else {
             console.error('API error: ' + myJson.message);
@@ -64,22 +64,25 @@ if(response.ok) {
 			console.log(cardlist)
 			var cardsHTML = "";
 			var currentlink = "";
+			var eastereggelement = "";
 			//loop
 			for (let i = 0; i < cardlist.length; i++) {
-				if (cardlist[i].link){currentlink = "<button class='bx--btn bx--btn--secondary bx--btn--field buttontolink' type='button' onclick=\"window.location='" + cardlist[i].link.url + "';\">" + cardlist[i].link.text + "</button>"}   
-				cardsHTML += "<div class='bx--col-lg-4 cardsize'><div class='bx--tile'><div class='bx--tile__img'><img class='pictile' src='"
+				if (cardlist[i].link){currentlink = "<button class='bx--btn bx--btn--secondary bx--btn--field buttontolink' type='button' onclick=\"window.open('" + cardlist[i].link.url + "','_blank').focus();\">" + cardlist[i].link.text + "</button>"} 
+				if (cardlist[i].img.descr == "Github"){eastereggelement = "<div id='eastereggdiv' onclick='eastereggfound()'></div>"}else{eastereggelement = ""}			
+				cardsHTML += "<div class='bx--col-lg-4 cardsize'><div class='bx--tile tilesize'><div class='bx--tile__img'>" + eastereggelement + "<img class='pictile' src='"
 				+ cardlist[i].img.src + "' /></div><div class='bx--tile__content'><h2>"
 				+ cardlist[i].title + "</h2><p>"
 				+ cardlist[i].content + "</p>"
 				+ currentlink + "</div></div></div>";
 				/* cardlist[i].title + cardlist[i].content + cardlist[i].link + "<br>"   <a target='_white'>" + cardlist[i].link.text + "</a></button>*/		
 				currentlink = "";
-			}
+			} 
 			
 			var h = document.getElementById("secondline");
 h.innerHTML += cardsHTML; 
 			
 			console.log(cardsHTML);
+
           } else {
             console.error('API error: ' + myJson.message);
           }
@@ -91,6 +94,11 @@ h.innerHTML += cardsHTML;
  catch(error) {
       console.error('Error with fetch operation: ' + error);
     }
+}
+
+
+function eastereggfound() {
+ eastereggbtn.style.display = "block";
 }
 
 function formatMemNb(bytes) {
